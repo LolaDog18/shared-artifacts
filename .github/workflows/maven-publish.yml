@@ -29,8 +29,15 @@ jobs:
       - name: Set up maven settings.xml
         uses: s4u/maven-settings-action@v3.1.0
         with:
-          servers: '[{"id":"github","username":"${{ github.actor }}","password":"${{ secrets.GITHUB_TOKEN }}"}]'
+          servers: |
+            [
+              {
+                "id": "github",
+                "username": "${{ github.actor }}",
+                "password": "${{ secrets.GH_PAT }}"
+              }
+            ]
       - name: Deploy to GitHub packages
         run: mvn deploy -DskipTests
         env:
-          GH_PAT: ${{ secrets.GITHUB_TOKEN }}
+          GH_PAT: ${{ secrets.GH_PAT }}
