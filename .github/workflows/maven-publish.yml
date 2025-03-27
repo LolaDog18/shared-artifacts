@@ -34,10 +34,10 @@ jobs:
               {
                 "id": "github",
                 "username": "${{ github.actor }}",
-                "password": "${{ secrets.GH_PAT }}"
+                "password": "${{ secrets.CAR_RENTALS_TOKEN }}"
               }
             ]
       - name: Deploy to GitHub packages
         run: mvn deploy -DskipTests
         env:
-          GH_PAT: ${{ secrets.GH_PAT }}
+          GH_PAT: ${{ secrets.CAR_RENTALS_TOKEN }}
