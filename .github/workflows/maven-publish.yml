@@ -26,7 +26,7 @@ jobs:
           distribution: 'temurin'
           server-id: github
           settings-path: ${{ github.workspace }}
-      - name: Deploy to GitHub packages
-        run: mvn deploy -DskipTests
       - name: Set up maven settings.xml
         uses: s4u/maven-settings-action@v3.1.0
+      - name: Deploy to GitHub packages
+        run: mvn deploy -DskipTests
