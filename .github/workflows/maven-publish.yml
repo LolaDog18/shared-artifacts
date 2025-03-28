@@ -32,7 +32,7 @@ jobs:
           servers: |
             [
               {
-                "id": "github",
+                "id": "github-shared-artifacts",
                 "username": "${{ github.actor }}",
                 "password": "${{ secrets.SHARED_ARTIFACT_SECRET }}"
               }
