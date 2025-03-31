@@ -12,7 +12,7 @@
     <distributionManagement>
         <repository>
             <id>github-shared-artifacts</id>
-            <url>https://github.com/orgs/LolaDog18/packages</url>
+            <url>https://maven.pkg.github.com/LolaDog18/shared-artifacts</url>
         </repository>
     </distributionManagement>
 
