@@ -31,7 +31,7 @@ jobs:
           servers: |
             [
               {
-                "id": "github-lolaDog",
+                "id": "github-shared-artifacts",
                 "username": "${{ github.actor }}",
                 "password": "${{ secrets.GITHUB_TOKEN }}"
               }

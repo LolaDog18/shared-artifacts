@@ -11,8 +11,8 @@
 
     <distributionManagement>
         <repository>
-            <id>github-lolaDog</id>
-            <url>https://maven.pkg.github.com/LolaDog18/maven-registry</url>
+            <id>github-shared-artifacts</id>
+            <url>https://maven.pkg.github.com/LolaDog18/shared-artifacts</url>
         </repository>
     </distributionManagement>
 
