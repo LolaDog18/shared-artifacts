@@ -31,12 +31,12 @@ jobs:
           servers: |
             [
               {
-                "id": "github-shared-artifacts",
+                "id": "github",
                 "username": "${{ github.actor }}",
-                "password": "${{ secrets.SHARED_ARTIFACT_SECRET }}"
+                "password": "${{ secrets.GITHUB_TOKEN }}"
               }
             ]
       - name: Deploy to GitHub packages
         run: mvn deploy -DskipTests
         env:
-          GH_PAT: ${{ secrets.SHARED_ARTIFACT_SECRET }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
